@@ -107,7 +107,7 @@ const Home = () => {
 
   return (
     <div className="relative">
-      <div className="relative">
+
       <div className="lg:flex ">
         <div className="w-full p-5 border">
           <div className="p-3 flex items-center gap-4 ">
