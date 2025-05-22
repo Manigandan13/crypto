@@ -127,6 +127,14 @@ const Home = () => {
            
           </div>
 
+          {coin.error && (
+            <div className="bg-yellow-100 text-yellow-800 p-4 rounded-md m-4 border border-yellow-300">
+            <p>
+            "We're using an external API to fetch coin data. Due to rate limits, please wait a minute and refresh."
+            </p>
+          </div>
+          )}
+
           <AssetTable
             category={category}
             coins={category == "all" ? coin.coinList : coin.top50}
