@@ -198,7 +198,7 @@ const Home = () => {
             </Pagination>
           )}
         </div>
-        )
+        )}
 
         
       </div>
