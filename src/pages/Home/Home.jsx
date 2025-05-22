@@ -107,7 +107,6 @@ const Home = () => {
 
   return (
     <div className="relative">
-
       <div className="lg:flex ">
         <div className="w-full p-5 border">
           <div className="p-3 flex items-center gap-4 ">
@@ -127,6 +126,22 @@ const Home = () => {
             </Button>
            
           </div>
+
+          {coin.error && (
+  <div className="bg-yellow-100 text-yellow-800 p-4 rounded-md m-4 border border-yellow-300">
+    <p>
+      {coin.error.includes("free plan")
+        ? "We're using an external API to fetch coin data. Due to rate limits, please wait a minute and refresh."
+        : coin.error}
+    </p>
+    <button
+      onClick={() => dispatch(fetchCoinList())}
+      className="mt-2 bg-yellow-300 text-black px-4 py-1 rounded hover:bg-yellow-400"
+    >
+      Retry
+    </button>
+  </div>
+)}
           <AssetTable
             category={category}
             coins={category == "all" ? coin.coinList : coin.top50}
