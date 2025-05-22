@@ -53,3 +53,4 @@ const PortfolioSkeleton = ({ rows = 6 }) => {
     </Table>
   );
 };
+export default PortfolioSkeleton;
