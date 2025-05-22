@@ -1,11 +1,4 @@
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+
 const SkeletonLoader = ({ rows = 10 }) => {
   return (
     <div className="space-y-4 animate-pulse">
