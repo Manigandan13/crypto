@@ -1,3 +1,11 @@
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 const PortfolioSkeleton = ({ rows = 6 }) => {
   return (
     <Table className="px-5 relative text-xs md:text-sm">
