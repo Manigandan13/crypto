@@ -24,6 +24,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { getAllOrdersForUser } from "@/Redux/Order/Action";
 import { calculateProfite } from "@/Util/calculateProfite";
 import { readableDate } from "@/Util/readableDate";
+import TreadingHistorySkeleton from "@/components/custome/TreadingHistorySkeleton";
 
 const TreadingHistory = () => {
   const dispatch = useDispatch();
@@ -36,6 +37,10 @@ const TreadingHistory = () => {
     dispatch(getAllOrdersForUser({ jwt: localStorage.getItem("jwt") }));
   }, []);
 
+  if (asset.loading) {
+    return <TreadingHistorySkeleton rows={8} />;
+  }
+  
   const handleTabChange = (value) => {
     setCurrentTab(value);
   };
